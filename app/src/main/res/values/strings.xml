@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">20230706-SungJun-NYCSchools</string>
+    <string name="app_name">20230612-SungJun-NYCSchools</string>
+    <string name="no_sat_data_from_api">No SAT DATA from API</string>
+    <string name="sat_score_data_error">SAT Score data error</string>
+    <string name="nyc_school">Loading NYC High School Data..</string>
+    <string name="school_list_data_error">School list Data error</string>
 </resources>
