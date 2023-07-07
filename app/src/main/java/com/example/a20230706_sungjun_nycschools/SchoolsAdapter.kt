@@ -32,8 +32,7 @@ class SchoolsAdapter(private val schools: SchoolsResponse) :
         }
 
         fun bind(school: SchoolData) {
-            binding.tvSchoolName.text = school.school_name
-            binding.tvSchoolCity.text = school.city
+            binding.schoolunit = school
         }
     }
 }

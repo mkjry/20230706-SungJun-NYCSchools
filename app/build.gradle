@@ -30,8 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    viewBinding {
-        enabled = true
+    buildFeatures{
+        viewBinding = true
+        dataBinding = true
     }
 }
 
@@ -46,6 +47,10 @@ dependencies {
 
     testImplementation 'junit:junit:4.13.2'
 
+    // ViewModel & LiveData
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+
     // google truth library for assertThat
     testImplementation 'com.google.truth:truth:1.1.2'
     androidTestImplementation 'com.google.truth:truth:1.1.2'
@@ -54,8 +59,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     //coroutines
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+//    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
 
     //retrofit2
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
