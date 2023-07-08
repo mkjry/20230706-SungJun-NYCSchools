@@ -24,10 +24,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel = ViewModelProvider(this)[SchoolViewModel::class.java]
         apiDataMonitor()
 
         // This make visible Recyclerview, when SAT data is visible
@@ -37,6 +37,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun apiDataMonitor() {
+
+        viewModel = ViewModelProvider(this)[SchoolViewModel::class.java]
         viewModel.initViewModel()
         binding.progressBar.visibility = GONE
 
@@ -68,6 +70,7 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("NotifyDataSetChanged", "SuspiciousIndentation")
     private fun schoolsListVisible() {
+
         viewModel.schools.observe(this) {
             if(!it.isNullOrEmpty()) {
                 schoolsAdapter = SchoolsAdapter(it)
@@ -80,6 +83,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun getSatScore(dbn: String) {
+        
         binding.progressBar.visibility = VISIBLE
         binding.recyclerVIew.visibility = GONE
         viewModel.getSatScores(dbn)
