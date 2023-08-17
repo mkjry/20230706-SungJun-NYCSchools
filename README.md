@@ -1,4 +1,15 @@
 # 20230706-SungJun-NYCSchools
+
+Demonstrate of..
+
+Kotlin, Coroutine
+API data call with Retrofit
+MVVM with Live Data, Observer pattern
+View Bindine/ Data Binding with Live Data
+Recyhclerview with Click event for 2nd API call
+
+Logic flows..
+
 Get the Schools list from API request
 Kotlin Coroutine > ViewModelScope > Retrofit API call
 > get Schools List > PostValue through LiveData on ViewModel Class
